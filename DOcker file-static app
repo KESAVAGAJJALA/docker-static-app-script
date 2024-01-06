@@ -1,0 +1,6 @@
+FROM amazonlinux
+RUN yum -y install httpd
+CMD /usr/sbin/httpd -D FOREGROUND
+EXPOSE 80
+RUN yum -y install git
+RUN git clone https://github.com/KESAVAGAJJALA/food.git /var/www/html
